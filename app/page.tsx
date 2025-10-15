@@ -1,5 +1,8 @@
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger,SplitText } from "gsap/all";
+
 
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
@@ -8,8 +11,10 @@ gsap.registerPlugin(ScrollTrigger,SplitText);
 
 export default function Home() {
   return (
-    <div className="flex-center h-[100vh]">
-      <h1 className="text-3xl text-indigo-300">Hello This An Animated Landing Page</h1>
-    </div>
+<main>
+  <Navbar/>
+  <Hero/>
+  <div className="h-dvh bg-black"/>
+</main>
   );
 }
