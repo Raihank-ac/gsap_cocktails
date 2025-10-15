@@ -24,6 +24,7 @@ export default function Home() {
   <Art/>
   <Menu/>
   <Contact/>
+  
 </main>
   );
 }

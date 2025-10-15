@@ -8,10 +8,11 @@ import { ScrollTrigger } from 'gsap/all'
 
 
 gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(SplitText) 
 
 const Hero = () => {
 
-  const videoRef = useRef<HTMLInputElement>(null);
+  const videoRef = useRef(null);
 
   const isMobile = useMediaQuery({maxWidth:767})
 
@@ -62,9 +63,18 @@ const Hero = () => {
       }
     })
 
-       videoRef.current.onloadedmetadata=()=>{
-        tl.to(videoRef.current,{
-        currentTime:videoRef.current.duration,
+       //videoRef.current!.onloadedmetadata=()=>{
+       // tl.to(videoRef.current!,{
+        //currentTime:videoRef.current!.duration,
+      //})
+    //}
+
+    if (videoRef.current) {
+      const video = videoRef.current
+
+      tl.to(video,{
+        currentTime:video.duration,
+        
       })
     }
 
