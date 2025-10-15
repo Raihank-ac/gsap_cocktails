@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
 
-  const videoRef = useRef<HTMLInputElement>();
+  const videoRef = useRef<HTMLInputElement>(null);
 
   const isMobile = useMediaQuery({maxWidth:767})
 
